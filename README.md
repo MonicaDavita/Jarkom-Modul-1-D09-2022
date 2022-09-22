@@ -72,6 +72,19 @@ b. Membuka wireshark dan melakukan capture filter dengan sintaks **src host 192.
 c. Lalu akan muncul packages yang menunjukkan Source berupa alamat IP kita dengan Destination yang beragam.
 ![Soal7c](https://github.com/MonicaDavita/Asset-Jarkom/blob/main/Modul%201/7.3.jpg?raw=true)
 
+## Soal 8
+### Deskripsi Soal
+Menelusuri aliran paket dalam file soal8-10.pcap dan mencari informasi mengenai percakapan kedua mahasiswa terkait tindakan kecurangan pada kegiatan praktikum dengan menerapkan filter 
+### Langkah-langkah
+a. Setelah mendownload dan membuka file8-10.pcap, langkah selanjutnya adalah mencari informasi percakapan mahasiswa dengan menerapkan filter **tcp.stream eq 12**
+b. Lalu, klik kanan **follow -> TCP stream** maka akan muncul informasi mengenai percakapan mahasiswa seperti dibawah ini.
+
+## Soal 9
+### Deskripsi Soal
+Mencari file laporan pertukaran file yang ada di soal8-10.pcap dan diberi format [nama_kelompok.des3] dan menyimpan output file dengan format [flag.txt]
+### Langkah-langkah
+a. Setelah membuka file soal8-10.pcap, langkah selanjutnya adalah mencari file laporan pertukaran yang dimaksud pada soal, setelah diketahui ternyata ada pada line 61, setelah itu bisa di export packet bytes dan disimpan dengan format D08.des3
+b. Kemudian, membuka terminal pada linux, dan mengetikkan **openssl des3 -d -salt -in D08.des3 -out flag.txt -k nakano** dengan memasukkan password yang sesuai pada soal. lalu, klik enter.
 
 ## Kendala
 1. Kebingungan di nomor 6. Awalnya hanya menemukan 1 package tapi setelah ditelusuri ternyata ditemukan packages yang menuju lama lipi.go.id
