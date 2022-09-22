@@ -76,15 +76,31 @@ c. Lalu akan muncul packages yang menunjukkan Source berupa alamat IP kita denga
 ### Deskripsi Soal
 Menelusuri aliran paket dalam file soal8-10.pcap dan mencari informasi mengenai percakapan kedua mahasiswa terkait tindakan kecurangan pada kegiatan praktikum dengan menerapkan filter 
 ### Langkah-langkah
-a. Setelah mendownload dan membuka file8-10.pcap, langkah selanjutnya adalah mencari informasi percakapan mahasiswa dengan menerapkan filter **tcp.stream eq 12**
+a. Setelah mendownload dan membuka file8-10.pcap, langkah selanjutnya adalah mencari informasi percakapan mahasiswa dengan menerapkan filter `tcp.stream eq 12`
+![8a](https://user-images.githubusercontent.com/96837287/191796252-9a21e3a0-2e8e-4997-959e-b02770152f09.jpeg)
+
 b. Lalu, klik kanan **follow -> TCP stream** maka akan muncul informasi mengenai percakapan mahasiswa seperti dibawah ini.
+![8b](https://user-images.githubusercontent.com/96837287/191796334-cc96b075-4737-43aa-8298-8a7d7b8986eb.jpeg)
 
 ## Soal 9
 ### Deskripsi Soal
-Mencari file laporan pertukaran file yang ada di soal8-10.pcap dan diberi format [nama_kelompok.des3] dan menyimpan output file dengan format [flag.txt]
+Mencari file laporan pertukaran file yang ada di soal8-10.pcap dan diberi format **[nama_kelompok.des3]** dan menyimpan output file dengan format **[flag.txt]**
 ### Langkah-langkah
 a. Setelah membuka file soal8-10.pcap, langkah selanjutnya adalah mencari file laporan pertukaran yang dimaksud pada soal, setelah diketahui ternyata ada pada line 61, setelah itu bisa di export packet bytes dan disimpan dengan format D08.des3
-b. Kemudian, membuka terminal pada linux, dan mengetikkan **openssl des3 -d -salt -in D08.des3 -out flag.txt -k nakano** dengan memasukkan password yang sesuai pada soal. lalu, klik enter.
+![9a](https://user-images.githubusercontent.com/96837287/191796358-1afa7d94-1533-459c-810f-cc8f86388c3f.jpeg)
+
+b. Kemudian, membuka terminal pada linux, dan mengetikkan `openssl des3 -d -salt -in D08.des3 -out flag.txt -k nakano` dengan memasukkan password yang sesuai pada soal. lalu, klik enter.
+![9b(1)](https://user-images.githubusercontent.com/96837287/191796368-ebb7ba7d-eb5b-49e9-998c-bb4958d063ee.jpeg)
+![9b(2)](https://user-images.githubusercontent.com/96837287/191796381-fed7645c-6308-4472-be44-b8161dc9e57a.jpeg)
+
+## Soal 10
+### Deskripsi Soal
+Temukan password rahasia (flag) dari organisasi bawah tanah yang disebutkan di soal
+### Langkah-langkah
+a. Diketahui password yang dimaksud adalah **nakano**
+
+b. Berikut adalah output file flag.txt yang diketahui merupakan file laporan pertukaran yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh
+![10b](https://user-images.githubusercontent.com/96837287/191796395-beb2744b-ce39-4094-bd0d-3e936e7becf5.jpeg)
 
 ## Kendala
 1. Kebingungan di nomor 6. Awalnya hanya menemukan 1 package tapi setelah ditelusuri ternyata ditemukan packages yang menuju lama lipi.go.id
