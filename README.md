@@ -7,6 +7,33 @@ Pembahasan soal praktikum Modul 1 Jaringan Komputer 2022
 - Alya Shofarizqi Inayah - 5025201113
 - Meisya Salsabila Indrijo Putri - 5025201114
 ---
+## Soal 1
+### Deskripsi Soal
+Menyebutkan web server yang digunakan pada "monta.if.its.ac.id"
+### Langkah-langkah
+a. Membuka file soal1-2.pcapng, lalu mengeksekusi display filter dengan sintaks `tcp contains monta`
+![Screenshot (251)](https://user-images.githubusercontent.com/94627623/191756086-81996dec-71fc-42af-bf69-67a660ecfe5c.png)
+
+b. Selanjutnya `ctrl+alt+shift+T` untuk menggunakan `TCP stream`
+![Screenshot (252)](https://user-images.githubusercontent.com/94627623/191756338-ada680b8-2b70-414f-82c9-053f0c206ecd.png)
+
+## Soal 2
+### Deskripsi Soal
+Membantu Ishaq mencari topik TA untuk semester ini , dengan mencari detail topik pada website “monta.if.its.ac.id”, lalu melihat judul TA apa yang dibuka Ishaq
+### Langkah-langkah
+a. Setelah membuka soal1-2.pcapng, perlu melakukan display filter dengan sintaks `http contains “detail”` untuk mencari paket dengan protokol monta (yaitu http) yang mengandung token `“detail”` . Telah ditemukan paket dengan Info `“.../detailTopik/…”` sesuai permintaan soal.
+![Screenshot (255)](https://user-images.githubusercontent.com/94627623/191756869-8401d3f2-b5f9-4100-9458-2530432ed595.png)
+
+b. Selanjutnya `ctrl+alt+shift+H` untuk menggunakan `HTTP stream`, lalu mencari dengan kata kunci “Topik Tugas Akhir” hingga menemukan judul TA yang sesuai yaitu “Evaluasi untuk kerja User Space Filesystem” seperti pada gambar di bawah ini
+![Screenshot (256)](https://user-images.githubusercontent.com/94627623/191757024-80907659-6876-4de1-8c0a-a48000b5f2bf.png)
+
+## Soal 3
+### Deskripsi Soal
+Filter sehingga wireshark hanya menampilkan paket yang menuju port 80
+### Langkah-langkah
+Membuka file soal3-6.pcapng, lalu menggunakan display filter `tcp.dstport == 80` (karena yang dicari menuju, sehingga menggunakan .dstport)
+![Screenshot (253)](https://user-images.githubusercontent.com/94627623/191757385-665ced01-9aa0-4e6f-a794-03dc5548ab8d.png)
+
 ## Soal 4
 ### Deskripsi Soal
 Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!
